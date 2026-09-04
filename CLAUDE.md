@@ -27,12 +27,26 @@ COPY USADO:  [cuál de los copys oficiales, textual]
 NO TOCO:     [logos/fotos que se preservan íntegros]
 ```
 
-## Estructura sugerida del repo
+## Estructura del repo
 
 - `README.md` — fuente única de copys, contacto y reglas (no duplicar contenido en otros archivos)
-- `assets/` — logos oficiales, fotos de campaña, fuentes
-- `plantillas/` — layouts HTML/PPTX reutilizables para flyers
-- `output/` — piezas generadas (no versionar assets pesados si el repo crece mucho; evaluar `.gitignore`)
+- `assets/logos/` — logos oficiales Oviedo y Padel Rocks Rapel, badges
+- `assets/fotos-sucursal/` — fotos reales de la sucursal Oviedo El Manzano
+- `assets/fotos-padel-rocks/` — fotos reales del complejo (canchas, terraza, food truck)
+- `assets/piezas-referencia/` — flyers/banners ya publicados por ambas marcas, usados solo como referencia de formato/composición (nunca como fuente de texto)
+- `assets/video/` — clips de video reales para editar con Descript (ver § Herramientas)
+- `plantillas/` — layouts HTML reutilizables para flyers (pendiente de crear)
+- `output/` — piezas finales exportadas
+
+## Herramientas — qué se usa para qué
+
+| Necesidad | Herramienta | Por qué |
+|---|---|---|
+| Flyers (foto real + logo + texto) | **HTML/CSS por código** | Composición determinística: no toca píxeles de fotos ni logos, cero riesgo de alucinación. Se exporta a PNG. Es la herramienta principal del repo. |
+| Video promocional (clips reales del club/sucursal) | **Descript** | Edita metraje ya filmado por texto (cortar, subtítulos, quitar muletillas). No genera video desde cero — necesita los clips en `assets/video/`. |
+| Arte/diagramas 100% generados (ilustraciones, gráficos de datos) | Skills de diseño (canvas-design, dataviz, artifact-diagramming) | **Descartadas para piezas publicitarias** — dibujan desde cero, lo que viola la regla de fidelidad geográfica/de personas. Solo aptas para material interno no publicitario (ej. un diagrama de flujo para capacitación). |
+| Generación de imágenes fotorrealistas nuevas (tipo Midjourney/DALL-E) | No disponible / no se usa | Además de no estar conectada, iría directamente contra la regla "cero alucinaciones" del manual — no hace falta. |
+| Edición masiva/resize para redes por personal no técnico | Canva (conector) | **Decisión 2026-09-04: no autorizado por ahora.** Se evaluará si aparece la necesidad de bulk-resize entre varios formatos por alguien sin conocimientos de código. |
 
 ## Registro de sesiones
 
