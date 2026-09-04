@@ -14,6 +14,8 @@ Este archivo se carga automáticamente al inicio de cada sesión de Claude Code 
 - Texto de facilidad logística: "¿Construyendo en Rapel? Cotiza en la mañana y retira tus materiales en el pádel desde las 15:30 hrs. ¡Aprovecha tu tarde jugando!"
 - CTA pádel: "No te quedes sin jugar. ¡Escanea el código QR y asegura tu horario ahora mismo!"
 - CTA ferretería: "Cotiza y compra aquí. Despacho en el día o Retiro de productos desde las 15:30 hrs."
+- Gancho de apertura: "Nuevo en Rapel: Oviedo Express ya está funcionando dentro de Padel Rocks."
+- Gancho de apertura (emocional): "Desde hoy, cada vez que vengas a jugar, tu obra también avanza."
 - Contacto: WhatsApp Ferretería +569 3862 3488 · Reservas Pádel +569 5923 7808 · Sector El Estero S/N, Las Cabras · RRSS: `@padel_rocks_rapel` y `@oviedo_elmanzano`
 
 ## LEER OBLIGATORIO ANTES DE CUALQUIER TAREA

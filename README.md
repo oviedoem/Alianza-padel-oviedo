@@ -23,6 +23,8 @@ Las piezas de marketing deben estar diseñadas para captar la atención inmediat
 *   **Texto de Facilidad Logística:** *"¿Construyendo en Rapel? Cotiza en la mañana y retira tus materiales en el pádel desde las 15:30 hrs. ¡Aprovecha tu tarde jugando!"*
 *   **Llamado a la Acción Principal (Pádel):** *"No te quedes sin jugar. ¡Escanea el código QR y asegura tu horario ahora mismo!"*
 *   **Llamado a la Acción Secundario (Ferretería):** *"Cotiza y compra aquí. Despacho en el día o Retiro de productos desde las 15:30 hrs."*
+*   **Gancho de Apertura (aprobado 2026-09-04):** *"Nuevo en Rapel: Oviedo Express ya está funcionando dentro de Padel Rocks."*
+*   **Gancho de Apertura — variante emocional (aprobado 2026-09-04):** *"Desde hoy, cada vez que vengas a jugar, tu obra también avanza."*
 
 ### 2. Información Logística y de Contacto Unificada
 *   **📍 Dirección Completa:** Sector El Estero Sin Número, Las Cabras, Región de O'Higgins, Chile.
