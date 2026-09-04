@@ -59,6 +59,21 @@ La generación de piezas debe segmentar rigurosamente los bloques cromáticos y 
 
 ---
 
+## ⚠️ Errores Reales Documentados (generación previa con Gemini)
+
+Estos NO son hipótesis — son fallas reales que ocurrieron al generar un video/flyers con Gemini antes de este repo. Se documentan como checklist obligatorio de "qué NO debe volver a pasar" antes de aprobar cualquier pieza nueva:
+
+1. **Texto alucinado/gibberish (viola regla 2):** aparecieron palabras que no existen en español — *"Alenzano en el pronal, ventas y cotizaciones"*, *"Premium salos deraocales a todos sociales"*, un color llamado *"rade"*. Causa: dejar que el modelo redacte o autocomplete texto en vez de insertar los copys exactos del README.
+2. **Logo Oviedo redibujado en vez de insertado (viola regla 3):** el modelo dibujó un ícono de casa+pin inventado en lugar del isotipo real (cuadro rojo + cruz/estrella), y duplicó el texto: *"FERRETERÍA FERRETERÍAS OVIEDO"*. **Regla dura: el logo siempre se inserta como archivo de imagen desde `assets/logos/`, nunca se redibuja ni se re-genera con IA.**
+3. **RRSS inventadas (viola regla 4 — confirmado con caso real):** apareció un Facebook `reserve_rocks_rapng` — el sufijo gibberish "_rapng" que la regla 4 ya prohibía preventivamente, y terminó pasando de verdad. También se mezcló el handle de WhatsApp con "s/n" (una referencia de dirección, no un handle).
+4. **Persona/entorno genérico o inventado (viola reglas 1 y 5):** apareció un jugador tipo modelo de stock/IA que no es nadie real del club, sobre una cancha de fondo que no corresponde al Sector El Estero real. **Regla dura: las personas y el entorno de una pieza SIEMPRE salen de una foto real de `assets/fotos-padel-rocks/` o `assets/fotos-sucursal/` — nunca se genera una persona o escena nueva.**
+5. **Datos de contacto corruptos:** el teléfono de reservas apareció repetido 3 veces en la misma pieza, una de las repeticiones incompleta (`+56` solo, cortado). Antes de exportar, verificar que cada dato de contacto aparezca una sola vez y completo, copiado literal del README.
+6. **Mascota/personaje no oficial:** apareció un muñequito/mascota ferretera en una pieza — **confirmado que NO es un personaje oficial de Oviedo**. Prohibido crear o usar mascotas, personajes ilustrados o avatares nuevos: esta marca no tiene mascota oficial.
+
+Capturas de estos 5 errores guardadas en `assets/errores-a-evitar/` como referencia negativa permanente.
+
+---
+
 ## 🛠️ Instrucciones de Procesamiento para Claude Code
 
 Al automatizar la generación o edición de plantillas (ej. PPTX, layouts HTML o scripts de renderizado de video):

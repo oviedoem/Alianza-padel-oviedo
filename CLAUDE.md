@@ -27,8 +27,10 @@ Este archivo se carga automáticamente al inicio de cada sesión de Claude Code 
 - **Marcas y RRSS:** únicos handles válidos: `@padel_rocks_rapel` y `@oviedo_elmanzano`. No mezclar extensiones de archivo ni inventar nombres.
 - **Contacto:** WhatsApp Ferretería `+569 3862 3488`, Reservas Pádel `+569 5923 7808` — nunca intercambiar ni fusionar ambos números.
 - **Identidad visual:** no mezclar paletas — Oviedo (rojo/blanco/negro industrial) y Padel Rocks (verde/blanco/rosa pastel) se mantienen segmentadas por marca, nunca combinadas en un mismo bloque cromático.
-- **Logos:** no deformar, estirar, recortar ni pixelar. Proporciones originales siempre.
-- **Personas/uniformes reales:** prohibido inpainting o sustitución de fondo sobre fotos de personal con uniforme oficial Oviedo (MTS, SOLMAQ, DIKMAN, BLACK+FRESEN visibles).
+- **Logos:** nunca redibujar ni regenerar con IA — siempre insertar el archivo real de `assets/logos/`. No deformar, estirar, recortar ni pixelar. Proporciones originales siempre.
+- **Personas/uniformes reales:** prohibido inpainting o sustitución de fondo sobre fotos de personal con uniforme oficial Oviedo (MTS, SOLMAQ, DIKMAN, BLACK+FRESEN visibles). Personas y escenas SIEMPRE de foto real (`assets/fotos-padel-rocks/` o `assets/fotos-sucursal/`) — nunca generar una persona o cancha nueva.
+- **Mascotas/personajes:** esta marca NO tiene mascota oficial. Prohibido crear o insertar cualquier personaje ilustrado/avatar.
+- **Ver `assets/errores-a-evitar/`:** 5 fallas reales de una generación previa con Gemini (texto gibberish, logo redibujado, RRSS inventadas, persona de stock, contacto duplicado) — detalle en README.md § "Errores Reales Documentados". Repasar antes de aprobar cualquier pieza.
 - **Entorno geográfico:** Sector El Estero, Las Cabras — nada de fondos artificiales (montañas nevadas, lagos tropicales, palmeras). Mantener canchas azules, terrazas de madera clara, pallets, toldos beige/arena.
 - **QR dinámico:** siempre debe apuntar al link de reservas de pádel vigente en README.md — actualmente https://www.easycancha.com/es-CL/chile/club/padel-rocks-rapel (app/web EasyCancha, club "Padel Rocks Rapel").
 
@@ -49,6 +51,7 @@ NO TOCO:     [logos/fotos que se preservan íntegros]
 - `assets/fotos-padel-rocks/` — fotos reales del complejo (canchas, terraza, food truck)
 - `assets/piezas-referencia/` — flyers/banners ya publicados por ambas marcas, usados solo como referencia de formato/composición (nunca como fuente de texto)
 - `assets/video/` — clips de video reales para editar con Descript (ver § Herramientas)
+- `assets/errores-a-evitar/` — capturas de fallas reales de una generación previa con Gemini (checklist de qué NO repetir, ver README.md)
 - `plantillas/` — layouts HTML reutilizables para flyers (pendiente de crear)
 - `output/` — piezas finales exportadas
 
