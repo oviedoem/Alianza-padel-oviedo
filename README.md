@@ -65,3 +65,17 @@ Al automatizar la generación o edición de plantillas (ej. PPTX, layouts HTML o
 *   **Mapeo de Links:** El código QR dinámico debe redirigir al link oficial de reservas — https://www.easycancha.com/es-CL/chile/club/padel-rocks-rapel (club "Padel Rocks Rapel" en EasyCancha) — y los textos de redes sociales deben respetar exactamente los strings oficiales declarados.
 *   **Jerarquía Visual:** Mantén un balance equitativo en los layouts donde se visualice la convivencia de ambas marcas, asegurando que los números de contacto de la ferretería (+569 3862 3488) y del club de pádel (+569 5923 7808) estén claramente diferenciados según su función.
 *   **Textos Limpios:** Prohibido alterar la ortografía de marcas comerciales o direcciones geográficas.
+
+---
+
+## 📐 Formatos de Exportación por Canal
+
+Medidas oficiales de cada plataforma (no inventadas, tomadas de las specs vigentes de cada red). Toda pieza debe exportarse en el formato exacto del canal de destino, no reescalar un formato para otro:
+
+| Canal | Formato | Medida (px) | Notas |
+|---|---|---|---|
+| Instagram / Facebook Feed | Cuadrado 1:1 | 1080 × 1080 | Formato base de la mayoría de las piezas de referencia ya subidas. |
+| Instagram / Facebook Feed | Vertical 4:5 | 1080 × 1350 | Ocupa más espacio en el feed que el cuadrado; usar si se prioriza alcance orgánico. |
+| Instagram / TikTok Stories y Reels | Vertical 9:16 | 1080 × 1920 | Dejar zonas seguras libres de texto arriba/abajo (~250px) para no chocar con UI de la app. |
+| WhatsApp (imagen en chat/estado) | Cuadrado o 9:16 | 1080 × 1080 o 1080 × 1920 | WhatsApp comprime la imagen; exportar en JPG liviano (idealmente <1 MB) para que no pierda calidad al comprimir. |
+| Banner para bot/app WhatsApp | — | **Pendiente de definir** | El menú interactivo del bot es solo texto (no consume imagen de banner hoy). Antes de diseñar esta pieza hay que confirmar dónde se mostraría (¿portada de catálogo de WhatsApp Business? ¿imagen de bienvenida del bot? ¿banner dentro del panel-cliente?) para no exportar un formato sin destino real.
