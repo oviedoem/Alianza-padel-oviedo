@@ -2,6 +2,20 @@
 
 Este archivo se carga automáticamente al inicio de cada sesión de Claude Code en este repo.
 
+## 📋 COPYS OFICIALES (texto exacto — fuente de verdad duplicada aquí a propósito)
+
+> Nota técnica: esta sección repite textual el contenido de README.md § "Copys y Slogans Oficiales".
+> Es una duplicación deliberada: herramientas externas (ej. paneles de agentes IA de otros repos del
+> ecosistema) leen CLAUDE.md primero y, si existe, NO leen README.md — así que si esto no está acá,
+> esas herramientas "no ven" los copys reales. Si se edita un copy, actualizar en AMBOS archivos.
+
+- Slogan principal: "Juega. Cotiza. Retira. Todo en un solo lugar."
+- Mensaje de gancho: "Ven por el pádel, sal con tus materiales: Oviedo Express atiende dentro del club."
+- Texto de facilidad logística: "¿Construyendo en Rapel? Cotiza en la mañana y retira tus materiales en el pádel desde las 15:30 hrs. ¡Aprovecha tu tarde jugando!"
+- CTA pádel: "No te quedes sin jugar. ¡Escanea el código QR y asegura tu horario ahora mismo!"
+- CTA ferretería: "Cotiza y compra aquí. Despacho en el día o Retiro de productos desde las 15:30 hrs."
+- Contacto: WhatsApp Ferretería +569 3862 3488 · Reservas Pádel +569 5923 7808 · Sector El Estero S/N, Las Cabras · RRSS: `@padel_rocks_rapel` y `@oviedo_elmanzano`
+
 ## LEER OBLIGATORIO ANTES DE CUALQUIER TAREA
 
 1. Leer `README.md` — contexto estratégico, copys oficiales, datos de contacto, manual de estilo y reglas de control de identidad. Es la fuente de verdad única para todo texto y diseño generado en este repo.
