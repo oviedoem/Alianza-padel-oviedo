@@ -21,7 +21,8 @@ Este archivo se carga automáticamente al inicio de cada sesión de Claude Code 
 ## LEER OBLIGATORIO ANTES DE CUALQUIER TAREA
 
 1. Leer `README.md` — contexto estratégico, copys oficiales, datos de contacto, manual de estilo y reglas de control de identidad. Es la fuente de verdad única para todo texto y diseño generado en este repo.
-2. No generar ninguna pieza (flyer, video, PPTX, HTML) sin haber releído `README.md` en esa sesión — los copys, colores y reglas anti-alucinación pueden actualizarse ahí.
+2. Leer el archivo `estado-sesion-*.md` más reciente en `memory/` (ordenar por fecha en el nombre) para retomar exactamente dónde quedó la sesión anterior — qué se aprobó, qué quedó pendiente, qué NO volver a preguntar.
+3. No generar ninguna pieza (flyer, video, PPTX, HTML) sin haber releído `README.md` en esa sesión — los copys, colores y reglas anti-alucinación pueden actualizarse ahí.
 
 ## REGLAS NO NEGOCIABLES (resumen operativo)
 
@@ -78,4 +79,4 @@ NO TOCO:     [logos/fotos que se preservan íntegros]
 
 ## Registro de sesiones
 
-Al cerrar una sesión con cambios, dejar un resumen breve en el commit (qué pieza se generó/modificó, qué falta). Este proyecto es de bajo volumen de código — no requiere `estado-sesion-*.md` salvo que el flujo se vuelva más complejo.
+Al cerrar cualquier sesión con cambios: dejar un resumen breve en el commit, Y guardar/actualizar `memory/estado-sesion-YYYYMMDD.md` con el mismo formato que `ferreteria-oviedo` (Hecho / Pendiente / Próxima sesión debe empezar por). Esto permite retomar el trabajo desde una PC distinta o una sesión nueva sin perder contexto — es lo que le permitió a la sesión del PC local seguir exactamente donde quedó la sesión en la nube.
