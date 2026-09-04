@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:#000;}
+
+  .canvas{position:relative;width:1080px;height:1920px;}
+  .bg{
+    position:absolute;inset:0;
+    background:url('../assets/fotos-padel-rocks/cancha-jugadora-red.jpg') center 30%/cover no-repeat;
+  }
+  .gradient-top{
+    position:absolute;top:0;left:0;right:0;height:420px;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
+  }
+  .gradient-bottom{
+    position:absolute;bottom:0;left:0;right:0;height:900px;
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.92) 75%, rgba(0,0,0,0.96) 100%);
+  }
+
+  /* zona segura superior ~250px sin texto/logos importantes */
+  .badges{
+    position:absolute;top:270px;left:0;right:0;
+    display:flex;justify-content:center;align-items:center;gap:28px;
+  }
+  .badge{
+    width:120px;height:120px;border-radius:20px;overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.5);border:3px solid #fff;background:#fff;
+  }
+  .badge img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* contenido principal, siempre por encima de y=1670 (zona segura inferior) */
+  .content{
+    position:absolute;left:0;right:0;bottom:250px;
+    padding:0 64px;
+  }
+  .headline{
+    color:#fff;font-size:58px;font-weight:800;line-height:1.16;
+    margin-bottom:26px;text-shadow:0 2px 10px rgba(0,0,0,0.55);
+  }
+  .headline .accent{color:#E11515;}
+  .subtext{
+    color:#f2f2f2;font-size:32px;font-weight:600;line-height:1.32;
+    margin-bottom:34px;
+  }
+  .contactbar{
+    background:#0c0c0c;border-top:3px solid #E11515;
+    margin:0 -64px;padding:22px 64px 26px 64px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .contact-row{
+    color:#fff;font-size:26px;font-weight:700;display:flex;align-items:center;gap:14px;
+  }
+  .contact-row .dot{color:#E11515;font-weight:900;}
+  .handles{color:#c9c9c9;font-size:23px;font-weight:600;margin-top:4px;}
+  .handles b{color:#fff;}
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="bg"></div>
+    <div class="gradient-top"></div>
+    <div class="gradient-bottom"></div>
+
+    <div class="badges">
+      <div class="badge"><img src="../assets/logos/padel-rocks-rapel-logo.jpg"></div>
+      <div class="badge"><img src="../assets/logos/oviedo-ferreterias-logo.png"></div>
+    </div>
+
+    <div class="content">
+      <div class="headline">Desde hoy, cada vez que vengas a jugar, tu <span class="accent">obra también avanza</span>.</div>
+      <div class="subtext">¿Construyendo en Rapel? Cotiza en la mañana y retira tus materiales en el pádel desde las 15:30 hrs. ¡Aprovecha tu tarde jugando!</div>
+
+      <div class="contactbar">
+        <div class="contact-row"><span class="dot">●</span> WhatsApp Ferretería +56 9 3862 3488</div>
+        <div class="contact-row"><span class="dot">●</span> Sector El Estero S/N, Las Cabras</div>
+        <div class="handles"><b>@oviedo_elmanzano</b> &nbsp;·&nbsp; <b>@padel_rocks_rapel</b></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
