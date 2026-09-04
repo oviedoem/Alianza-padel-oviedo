@@ -48,6 +48,12 @@ NO TOCO:     [logos/fotos que se preservan íntegros]
 | Generación de imágenes fotorrealistas nuevas (tipo Midjourney/DALL-E) | No disponible / no se usa | Además de no estar conectada, iría directamente contra la regla "cero alucinaciones" del manual — no hace falta. |
 | Edición masiva/resize para redes por personal no técnico | Canva (conector) | **Decisión 2026-09-04: no autorizado por ahora.** Se evaluará si aparece la necesidad de bulk-resize entre varios formatos por alguien sin conocimientos de código. |
 
+## Reglas de video (definidas 2026-09-04)
+
+- **Peso de archivos:** los clips crudos NO se versionan en git — `assets/video/` está en `.gitignore` salvo `.gitkeep`. Los clips viven en Descript/drive externo; el repo solo guarda el video final exportado en `output/`.
+- **Música:** por ahora los videos van sin música de fondo (solo audio ambiente/voz). Si en el futuro se agrega una pista, hay que documentar acá la licencia de uso comercial antes de publicar, para evitar reclamos de derechos de autor en Instagram/Facebook.
+- **Personas que aparecen en cámara:** confirmado por el cliente (2026-09-04) que las personas que aparecen jugando en los clips (no solo personal Oviedo) ya cuentan con autorización de imagen para uso publicitario del club. No requiere blur ni corte adicional por este motivo.
+
 ## Registro de sesiones
 
 Al cerrar una sesión con cambios, dejar un resumen breve en el commit (qué pieza se generó/modificó, qué falta). Este proyecto es de bajo volumen de código — no requiere `estado-sesion-*.md` salvo que el flujo se vuelva más complejo.

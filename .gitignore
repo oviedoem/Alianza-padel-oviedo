@@ -1,0 +1,4 @@
+# Video crudo: se edita en Descript, no se versiona en git (repo liviano).
+# Solo el resultado final exportado va en /output.
+assets/video/*
+!assets/video/.gitkeep
