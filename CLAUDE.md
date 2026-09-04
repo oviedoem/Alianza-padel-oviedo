@@ -72,6 +72,9 @@ NO TOCO:     [logos/fotos que se preservan íntegros]
 - **Peso de archivos:** los clips crudos NO se versionan en git — `assets/video/` está en `.gitignore` salvo `.gitkeep`. Los clips viven en Descript/drive externo; el repo solo guarda el video final exportado en `output/`.
 - **Música:** por ahora los videos van sin música de fondo (solo audio ambiente/voz). Si en el futuro se agrega una pista, hay que documentar acá la licencia de uso comercial antes de publicar, para evitar reclamos de derechos de autor en Instagram/Facebook.
 - **Personas que aparecen en cámara:** confirmado por el cliente (2026-09-04) que las personas que aparecen jugando en los clips (no solo personal Oviedo) ya cuentan con autorización de imagen para uso publicitario del club. No requiere blur ni corte adicional por este motivo.
+- **Sin vocero:** confirmado (2026-09-04) que los clips son solo metraje de ambiente (canchas, terraza, gente jugando) — nadie habla directo a cámara. Si en el futuro se agrega un vocero, su guion debe ceñirse a los copys oficiales del README, nada de precios o promesas improvisadas.
+- **Subtítulos:** SIEMPRE quemados en pantalla (confirmado 2026-09-04) — la mayoría de las reproducciones en IG/TikTok son sin sonido. Deben ser transcripción literal del audio real del clip (o de los copys oficiales si es texto añadido), nunca texto inventado o aproximado.
+- **Funciones de IA generativa de Descript — PROHIBIDAS (confirmado 2026-09-04):** no usar Overdub (clonar/sintetizar voz), Eye Contact (corregir la mirada con IA), generación de B-roll por IA, ni cualquier función de "auto-edit" que inserte contenido sintético. Solo edición no generativa sobre metraje real: cortar, reordenar, quitar muletillas, subtítulos por transcripción real, ajustes de color/audio estándar. Es la misma regla de cero alucinaciones del resto del manual, aplicada a video.
 
 ## Registro de sesiones
 
