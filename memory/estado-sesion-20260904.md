@@ -34,8 +34,10 @@
 - **3ra pieza aprobada:** `output/flyer-apertura-oviedo-express.png` (1080x1080) — corrige el estilo "recortado" (logos en cajas, fuente genérica) de la pieza anterior: logos integrados directo sobre foto real, tipografía condensada/itálica (Impact — no había archivo de fuente oficial de marca en el repo, se usó el equivalente de sistema más cercano; si aparece el .ttf real de Oviedo, reemplazar). Plantilla reutilizable en `plantillas/flyer-apertura-oviedo-express.html` (self-contained, imágenes y fuente embebidas en base64, renderizada con Chrome headless). Commit `06718c0`.
 
 ### Pendiente
-- **Resolver la marca de agua de Descript** (cuenta gratuita) antes de poder publicar el video del trayecto en redes.
-- **Conseguir vocero real filmado** (empleado Oviedo, uniforme real, 2-3 frases de los copys oficiales) — sin esto, el video queda sin vocero. NO usar IA para esto bajo ningún escenario, aunque se vuelva a pedir.
+- **Terminar de armar el video manualmente:** cortar `output/revision-apertura.mp4` (26s, versión limpia y correcta) desde el segundo ~19 y pegar en su lugar `output/cierre-video-vertical.png` (tarjeta de cierre nueva con logos integrados + iconos reales de Instagram y WhatsApp, ya con datos correctos). Usuario decidió armarlo él mismo — la cuenta de Descript se quedó sin créditos de IA a mitad de este ajuste (`upgrade_url` disponible si se decide recargar y volver a intentar vía Agent Underlord).
+- **OJO:** el proyecto de Descript `0338de4f-d0cf-4ecb-8a4f-cf20a9567285` quedó en estado roto (27s, segmento duplicado, termina en negro) tras el error de créditos — no usar `revision-apertura-v2.mp4` como fuente, está mal. No reintentar más ediciones vía `prompt_project_agent` en esa cuenta sin confirmar que se recargaron créditos.
+- La marca de agua de Descript (cuenta gratuita) sigue sin resolverse — no bloqueante para el usuario, decidió seguir sin importarle por ahora.
+- **Vocero:** usuario confirmó seguir SIN vocero — el video queda sin vocero por ahora, cerrado ese tema (no se volvió a pedir IA para esto en esta sesión, quedó resuelto).
 - Correr `ACTUALIZAR_CONTEXTO_BOT.bat` completo en el PC para que `negocio.md` tome el estado más reciente del repo (el parche manual anterior ya no aplica, se revirtió).
 - Publicar las piezas aprobadas (2 flyers + este 3ro) en Instagram, reforzando con historias.
 - Definir si hay un incentivo/promo real para los primeros clientes (no inventado por IA) — pregunta abierta.
