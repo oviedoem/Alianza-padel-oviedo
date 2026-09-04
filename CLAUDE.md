@@ -16,7 +16,7 @@ Este archivo se carga automáticamente al inicio de cada sesión de Claude Code 
 - **Logos:** no deformar, estirar, recortar ni pixelar. Proporciones originales siempre.
 - **Personas/uniformes reales:** prohibido inpainting o sustitución de fondo sobre fotos de personal con uniforme oficial Oviedo (MTS, SOLMAQ, DIKMAN, BLACK+FRESEN visibles).
 - **Entorno geográfico:** Sector El Estero, Las Cabras — nada de fondos artificiales (montañas nevadas, lagos tropicales, palmeras). Mantener canchas azules, terrazas de madera clara, pallets, toldos beige/arena.
-- **QR dinámico:** siempre debe apuntar al link de reservas de pádel vigente en README.md.
+- **QR dinámico:** siempre debe apuntar al link de reservas de pádel vigente en README.md — actualmente https://www.easycancha.com/es-CL/chile/club/padel-rocks-rapel (app/web EasyCancha, club "Padel Rocks Rapel").
 
 ## Antes de cualquier pieza nueva
 

@@ -25,8 +25,9 @@ Las piezas de marketing deben estar diseñadas para captar la atención inmediat
 *   **📍 Dirección Completa:** Sector El Estero Sin Número, Las Cabras, Región de O'Higgins, Chile.
 *   **🗺️ Ubicación GPS Pádel:** https://goo.gl
 *   **🕒 Horario Pádel:** Lunes a Domingo de 08:00 a 23:00 hrs.
-*   **📱 Reservas Pádel:** +569 5923 7808
-*   **🌐 Instagram Pádel:** https://instagram.com
+*   **📱 Reservas Pádel (WhatsApp):** +569 5923 7808
+*   **📲 App de Reservas:** EasyCancha — buscar el club "Padel Rocks Rapel" en la app (iOS/Android) o vía web en https://www.easycancha.com/es-CL/chile/club/padel-rocks-rapel . Permite ver disponibilidad de las 2 canchas en tiempo real, reservar y pagar online. Política del club: sin devoluciones, solo cambios de horario con 24 hrs de anticipación.
+*   **🌐 Instagram Pádel:** https://instagram.com (perfil: `@padel_rocks_rapel`)
 *   **🛒 WhatsApp Ferretería (Cotizaciones):** +569 3862 3488
 *   **🌐 Instagram Ferretería:** https://instagram.com
 *   **💻 Sitio Web Corporativo:** www.oviedo.cl
@@ -61,6 +62,6 @@ La generación de piezas debe segmentar rigurosamente los bloques cromáticos y 
 ## 🛠️ Instrucciones de Procesamiento para Claude Code
 
 Al automatizar la generación o edición de plantillas (ej. PPTX, layouts HTML o scripts de renderizado de video):
-*   **Mapeo de Links:** Asegura que el código QR dinámico redirija al enlace de reservas de pádel y que los textos de redes sociales respeten exactamente los strings oficiales declarados.
+*   **Mapeo de Links:** El código QR dinámico debe redirigir al link oficial de reservas — https://www.easycancha.com/es-CL/chile/club/padel-rocks-rapel (club "Padel Rocks Rapel" en EasyCancha) — y los textos de redes sociales deben respetar exactamente los strings oficiales declarados.
 *   **Jerarquía Visual:** Mantén un balance equitativo en los layouts donde se visualice la convivencia de ambas marcas, asegurando que los números de contacto de la ferretería (+569 3862 3488) y del club de pádel (+569 5923 7808) estén claramente diferenciados según su función.
 *   **Textos Limpios:** Prohibido alterar la ortografía de marcas comerciales o direcciones geográficas.
