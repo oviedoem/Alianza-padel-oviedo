@@ -10,6 +10,13 @@ El objetivo de las piezas gráficas y videos es comunicar un concepto híbrido e
 ### 📅 Estado de la Campaña (actualizado 2026-09-04)
 La campaña **ya está lanzada** — no es un lanzamiento a futuro. Fase actual: **apertura del punto de venta Oviedo Express dentro del club** (el local se está abriendo). El **primer formato prioritario a producir es Instagram/Facebook feed 1:1** (cuadrado), usando las medidas ya documentadas en § "Formatos de Exportación por Canal".
 
+**Alerta de tráfico (2026-09-04):** solo 1 persona visitó el punto de venta en 2 días desde la apertura. Prioridad de contenido: visibilidad/descubrimiento, no conversión sofisticada.
+
+**Datos reales de audiencia (2026-09-04, no asumidos — verificados en Instagram):**
+- `@oviedo_elmanzano`: 572 seguidores, 234 publicaciones — **cuenta con más alcance, debe ser el canal principal de distribución**.
+- `@padel_rocks_rapel`: 327 seguidores, 43 publicaciones — canal secundario/refuerzo vía cross-tag.
+- El reel de co-branding "Donde juegas, también equipas tu obra" ya publicado en `@oviedo_elmanzano` tiene 159 reproducciones, contra 332-511 de otros posts recientes de la misma cuenta/audiencia. **Causa desconocida** (¿falta de refuerzo en historias? ¿el contenido no enganchó?) — no confirmada, no asumir una sola explicación al planificar la próxima pieza.
+
 ### 🎯 Enfoque Comercial y Beneficios para el Cliente (Pautas Clave)
 Las piezas de marketing deben estar diseñadas para captar la atención inmediata del cliente, enfocándose de manera agresiva en la **ubicación estratégica** y en las **facilidades logísticas excepcionales** que ofrece esta alianza:
 1. **Cotizar y Comprar de forma remota:** Gestión rápida vía canales digitales.
