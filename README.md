@@ -7,6 +7,9 @@ Este repositorio contiene los assets, copys unificados, especificaciones de form
 ## 📌 Contexto Estratégico de la Alianza (Co-Branding)
 El objetivo de las piezas gráficas y videos es comunicar un concepto híbrido exclusivo en la zona: **"Donde juegas, también equipas tu obra"**. El club de pádel integra en sus dependencias un punto de venta oficial **Oviedo Express**, permitiendo a los usuarios combinar deporte con la cotización, compra y retiro de materiales de construcción.
 
+### 📅 Estado de la Campaña (actualizado 2026-09-04)
+La campaña **ya está lanzada** — no es un lanzamiento a futuro. Fase actual: **apertura del punto de venta Oviedo Express dentro del club** (el local se está abriendo). El **primer formato prioritario a producir es Instagram/Facebook feed 1:1** (cuadrado), usando las medidas ya documentadas en § "Formatos de Exportación por Canal".
+
 ### 🎯 Enfoque Comercial y Beneficios para el Cliente (Pautas Clave)
 Las piezas de marketing deben estar diseñadas para captar la atención inmediata del cliente, enfocándose de manera agresiva en la **ubicación estratégica** y en las **facilidades logísticas excepcionales** que ofrece esta alianza:
 1. **Cotizar y Comprar de forma remota:** Gestión rápida vía canales digitales.
