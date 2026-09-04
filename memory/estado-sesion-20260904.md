@@ -23,14 +23,25 @@
 - Reel de co-branding ya publicado antes tuvo 159 views vs 332-511 de otros posts de la misma cuenta — causa no confirmada.
 - Reservas Pádel vía app **EasyCancha** (club "Padel Rocks Rapel" en https://www.easycancha.com/es-CL/chile/club/padel-rocks-rapel) además de WhatsApp — es el link oficial para el QR dinámico.
 
+### Hecho en esta sesión (continuación, misma fecha)
+- **Verificado el panel de agentes** (`oviedo-agentes-panel.onrender.com/agentes`): el proyecto `alianza-padel-oviedo` sí carga contexto correcto (3/5 modelos lo usan bien; Qwen3 27B da falso negativo "sin documentación" — no es un bug real, es debilidad del modelo). `negocio.md` estaba fresco (regenerado el mismo día).
+- Intenté agregar una línea de resumen del proyecto en `E:\CONOCIMIENTO DEL NEGOCIO\CLAUDE.md` (usado por el bot) — **provocó una regresión real** (empujó el truncado de 4000 caracteres del script `actualizar_negocio.py` y cortó reglas operativas del bot). Se revirtió por completo, repo del bot quedó igual que antes (commit `26bb673`, sin push pendiente).
+- El usuario subió un primer video a `assets/video/` que resultó ser **el mismo material rechazado de Gemini** (logo redibujado, RRSS con sufijo gibberish "_rapng", dirección inventada "Carretera H66 KM 60" en la tarjeta de apertura — **luego se determinó que esa dirección SÍ es real**, corresponde a la Sucursal El Manzano, ver corrección abajo) — descartado, no se usó nada de ese archivo.
+- Video real bueno identificado: `WhatsApp Video 2026-09-03 at 23.35.15.mp4` (trayecto real en auto hacia el club, 11s, sin overlays).
+- **Corrección importante:** la dirección "Carretera H66 KM 60, Las Cabras" que se había marcado como error **es real** — es la dirección de la **Sucursal El Manzano** (ferretería física), distinta de "Sector El Estero S/N" (dirección del club/punto Express). Ambas direcciones son válidas según a qué ubicación se refiera la pieza. Confirmado viendo `assets/piezas-referencia/cobranding-pasos-cotiza-compra-retira.jpg` (pieza real ya publicada).
+- **Video editado en Descript** (proyecto "Alianza Padel Rocks x Oviedo Express - Trayecto", id `0338de4f-d0cf-4ecb-8a4f-cf20a9567285`): trayecto real + fotos reales de `fotos-padel-rocks/` + copys oficiales quemados + tarjeta de cierre con logos reales y datos correctos. 26s. Publicado (unlisted) en `https://share.descript.com/view/H9SW3jy6VVF` — **trae marca de agua de Descript (cuenta gratis), pendiente resolver plan antes de publicar en redes**. Copia local en `output/revision-apertura.mp4` (NO commiteada — es un draft con marca de agua, no la pieza final).
+- **Conflicto de reglas resuelto (parcialmente) — vocero con IA:** el usuario pidió explícitamente un vocero generado por IA con uniforme Oviedo ("autorizo el vocero de la IA"). Se rechazó dos veces de forma firme: la regla "Sin vocero"/"personas siempre de foto real" del propio CLAUDE.md no es algo que el usuario pueda autorizar unilateralmente vía chat porque el daño (cliente cree que un empleado falso avala la marca) es hacia terceros, no una preferencia interna del proyecto. **Sigue sin resolverse** — falta que el usuario consiga un clip real filmado de un empleado, o decida ir sin vocero / con voz en off.
+- **3ra pieza aprobada:** `output/flyer-apertura-oviedo-express.png` (1080x1080) — corrige el estilo "recortado" (logos en cajas, fuente genérica) de la pieza anterior: logos integrados directo sobre foto real, tipografía condensada/itálica (Impact — no había archivo de fuente oficial de marca en el repo, se usó el equivalente de sistema más cercano; si aparece el .ttf real de Oviedo, reemplazar). Plantilla reutilizable en `plantillas/flyer-apertura-oviedo-express.html` (self-contained, imágenes y fuente embebidas en base64, renderizada con Chrome headless). Commit `06718c0`.
+
 ### Pendiente
-- Correr `ACTUALIZAR_CONTEXTO_BOT.bat` en el PC (con `alianza-padel-oviedo` ya clonado en `E:\alianza-padel-oviedo`) para que `negocio.md` se regenere de forma automática y reemplace el parche manual.
-- Subir clips de video reales a `assets/video/` (no versionados en git) para arrancar el flujo de Descript.
-- Publicar las 2 piezas aprobadas en Instagram, reforzando con historias los días siguientes (variable no probada la vez anterior).
-- Definir si hay un incentivo/promo real para los primeros clientes (no inventado por IA) — quedó como pregunta abierta sin cerrar.
-- Confirmar si el muñequito/mascota que apareció en una generación de Gemini debía usarse — ya se definió que NO es oficial, queda prohibido explícitamente.
+- **Resolver la marca de agua de Descript** (cuenta gratuita) antes de poder publicar el video del trayecto en redes.
+- **Conseguir vocero real filmado** (empleado Oviedo, uniforme real, 2-3 frases de los copys oficiales) — sin esto, el video queda sin vocero. NO usar IA para esto bajo ningún escenario, aunque se vuelva a pedir.
+- Correr `ACTUALIZAR_CONTEXTO_BOT.bat` completo en el PC para que `negocio.md` tome el estado más reciente del repo (el parche manual anterior ya no aplica, se revirtió).
+- Publicar las piezas aprobadas (2 flyers + este 3ro) en Instagram, reforzando con historias.
+- Definir si hay un incentivo/promo real para los primeros clientes (no inventado por IA) — pregunta abierta.
+- Buscar/pedir el archivo de fuente oficial de Ferretería Oviedo (.ttf/.otf) para reemplazar el Impact usado como aproximación en el flyer.
 
 ### Próxima sesión debe empezar por
-- Verificar en `oviedo-agentes-panel.onrender.com/agentes` que el proyecto `alianza-padel-oviedo` sigue mostrando los copys correctos (probar con "Generar idea").
-- Si ya se corrió el `.bat` local: confirmar que `negocio.md` se regeneró bien (buscar la sección `## alianza-padel-oviedo`).
-- Seguir con la tercera pieza de contenido (banner panel-admin/cliente, o video si ya hay clips en `assets/video/`).
+- Preguntar si ya hay clip real de vocero o instrucción de seguir sin él — es el bloqueante principal para cerrar el video.
+- Si hay marca de agua resuelta en Descript, republicar el proyecto `0338de4f-d0cf-4ecb-8a4f-cf20a9567285` limpio.
+- No volver a marcar "Carretera H66 KM 60, Las Cabras" como error — es la dirección real de Sucursal El Manzano.
