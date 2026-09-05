@@ -40,8 +40,18 @@ Esto resolvería el pendiente abierto de "definir promo/incentivo para primeros 
 - Caption: `output/flyer-collage-3fotos-1x1-caption.txt`.
 - **Aprobada por el dueño 2026-09-05** — lista para publicar.
 
+### Rediseño de plantillas inspirado en flyers reales de Oviedo (2026-09-05)
+Se revisaron las 18 piezas reales de `assets/piezas-referencia/` (flyers ya publicados por la marca matriz — no se pudo acceder a Instagram/oviedo.cl en vivo, bloqueados por el proxy de red del entorno). Patrones identificados: franjas diagonales rojo/negro, tipografía condensada blanca sobre rojo, precio en rojo gigante "DESDE $XX.XXX", footer negro con `WWW.OVIEDO.CL`, íconos de línea simple (pin, teléfono, camión) en vez de bullets.
+
+Aplicado a las plantillas:
+- `plantillas/flyer-logistica-1x1.html`: franja diagonal roja/negra en el header (sobre la foto) + íconos de línea SVG (teléfono, pin) en la barra de contacto. **Aprobado.**
+- `plantillas/flyer-collage-3fotos-1x1.html`: intento con franja diagonal en el header **rechazado** (tapaba el titular y los logos) → revertido a header plano negro con línea roja inferior, conservando solo los íconos de línea en el pie. **Aprobado en su versión corregida.**
+- Los PNG de `output/` para ambas piezas ya reflejan el diseño final aprobado (re-renderizados, mismos copys/fotos, sin cambios de contenido).
+
+**Regla aprendida para futuras piezas:** la franja diagonal roja/negra funciona bien como fondo detrás de una foto (con gradiente oscuro debajo para legibilidad), pero NO debe usarse como fondo de una barra de header con texto/logos en flexbox — el corte diagonal tapa contenido en los extremos. Usar franja diagonal solo sobre fondos fotográficos con overlay oscuro.
+
 ### Próxima sesión debe empezar por
-- Publicar la tercera y cuarta pieza (`flyer-logistica-oviedo-express-1x1.png` y `flyer-collage-3fotos-1x1.png`, con sus captions) en `@oviedo_elmanzano`.
+- Publicar la tercera y cuarta pieza (`flyer-logistica-oviedo-express-1x1.png` y `flyer-collage-3fotos-1x1.png`, con sus captions, diseño final aprobado 2026-09-05) en `@oviedo_elmanzano`.
 - Revisar métricas reales de las piezas ya publicadas (alcance/views) para decidir si repetir el formato o ajustar.
 - Si ya hay definición de promo "$4.000": redactar el copy siguiendo las reglas del README (nada inventado) y generar una pieza nueva.
 - Si ya hay clips en `assets/video/`: iniciar el flujo con Descript (Agent Underlord) respetando las reglas de video (sin IA generativa, subtítulos quemados, sin música por ahora).
