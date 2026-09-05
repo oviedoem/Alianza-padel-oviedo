@@ -1,7 +1,7 @@
 ## Estado sesión 2026-09-05
-**Versión activa:** primera campaña (apertura) — 2 piezas publicadas
+**Versión activa:** primera campaña (apertura) — 3 piezas aprobadas (2 publicadas + 1 nueva lista para publicar)
 **Deploy:** N/A (sin hosting propio en este repo)
-**Commits:** ninguno nuevo (sesión de verificación de estado, sin cambios de código)
+**Commits:** varios (ver detalle abajo — fotos nuevas + tercera pieza)
 
 ### Hecho en esta sesión
 - Verificado estado del repo: rama `claude/alianza-padel-oviedo-status-py3w19` limpia y sincronizada, README.md y CLAUDE.md consistentes entre sí.
@@ -24,7 +24,15 @@ Una de ellas (`mesa-productos-banner-promo-4000-01.jpg`) muestra un banner físi
 
 Esto resolvería el pendiente abierto de "definir promo/incentivo para primeros clientes" — **pero el dueño pidió NO oficializarla todavía en README/CLAUDE.md** hasta confirmar el texto exacto/vigencia. Queda pendiente de decisión, no de generación de piezas nuevas con ese copy hasta que se confirme.
 
+### Tercera pieza aprobada (2026-09-05)
+- **Flyer 1:1** `output/flyer-logistica-oviedo-express-1x1.png` (2160×2160, HD — 2x el estándar 1080×1080 de IG/FB, renderizado nativo del HTML sin upscaling) + caption en `output/flyer-logistica-oviedo-express-1x1-caption.txt`.
+- Copy usado: "Texto de Facilidad Logística" oficial del README ("¿Construyendo en Rapel?...") + CTA ferretería.
+- Foto de fondo: `assets/fotos-sucursal/2026-09/cartel-oviedo-ferreterias-mts-01-realzada.jpg` — foto real del cartel Oviedo Ferreterías + bandera chilena en el local, con brillo/contraste/nitidez realzados vía Pillow (Brightness 1.55, Contrast 1.12, Sharpness 2.0 + UnsharpMask) sobre la foto original, sin alterar contenido ni agregar elementos sintéticos.
+- Plantilla nueva: `plantillas/flyer-logistica-1x1.html` (mismo layout que las 2 piezas anteriores: badges de ambos logos + gradiente + contactbar).
+- **Aprobada por el dueño 2026-09-05** — lista para publicar en Instagram.
+
 ### Próxima sesión debe empezar por
-- Revisar métricas reales de las 2 piezas publicadas (alcance/views) para decidir si repetir el formato o ajustar.
-- Si ya hay definición de promo: redactar el copy siguiendo las reglas del README (nada inventado) y generar la pieza.
+- Publicar la tercera pieza (`flyer-logistica-oviedo-express-1x1.png` + su caption) en `@oviedo_elmanzano`.
+- Revisar métricas reales de las 2 piezas ya publicadas (alcance/views) para decidir si repetir el formato o ajustar.
+- Si ya hay definición de promo "$4.000": redactar el copy siguiendo las reglas del README (nada inventado) y generar una pieza nueva.
 - Si ya hay clips en `assets/video/`: iniciar el flujo con Descript (Agent Underlord) respetando las reglas de video (sin IA generativa, subtítulos quemados, sin música por ahora).
