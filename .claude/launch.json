@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "plantillas-static",
+      "runtimeExecutable": "E:\\python-portable\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "plantillas"],
+      "port": 8791
+    }
+  ]
+}
