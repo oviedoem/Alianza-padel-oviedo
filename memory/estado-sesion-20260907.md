@@ -27,7 +27,14 @@ El dueño mandó por WhatsApp un audio real de radio ya usado en emisoras (spot 
 - **Decisión de diseño importante:** las 2 piezas cuadradas (logística, collage) tienen texto propio pegado al borde — recortarlas a 9:16 cortaba ese texto. Se cambió a mostrarlas COMPLETAS sin recortar (contain-fit + fondo desenfocado de la misma imagen), reservando el recorte/paneo Ken Burns solo para las 2 piezas ya verticales nativas (apertura, cierre).
 - **Posición del subtítulo:** cada pieza tiene su propio texto en un lugar distinto (apertura/logística/cierre: abajo o al medio → subtítulo arriba; collage: texto propio arriba → subtítulo abajo). Se verificó visualmente extrayendo frames con ffmpeg en 5 iteraciones hasta que no hubo choques.
 - **Pendiente menor conocido, no crítico:** un subtítulo (~0.7s) que cruza el corte collage→cierre queda con leve superposición visual con el texto propio de esa pieza durante ese instante corto — no es texto cortado ni ilegible, solo un roce estético breve. No se seguyó iterando más por ser las 2:45 AM y por retornos decrecientes (5 renders de ~4 min cada uno ya corridos).
-- Commit del video final + script + srt pendiente de confirmar push exitoso (33MB, puede tardar) — revisar `git log` al retomar.
+- Commit del video final + script + srt: `30206d5` (con subtítulos), confirmado pusheado.
+
+### Actualización posterior (mismo despertar, 09:2x AM): subtítulos quitados
+El usuario pidió explícitamente "sacar subtítulo del video". Se hizo:
+- Se agregó flag `BURN_SUBTITLES = False` en `scripts/build_video_radio.py` (fácil de revertir a `True` si se decide volver a quemarlos).
+- Se regeneró `output/video-radio-oviedo-express.mp4` sin subtítulos, verificado por frame que el texto propio de cada pieza queda intacto.
+- **Conflicto detectado y avisado al usuario (no bloqueante):** esto contradice la regla "no negociable" de `CLAUDE.md` — "Subtítulos: SIEMPRE quemados en pantalla (confirmado 2026-09-04) — la mayoría de las reproducciones en IG/TikTok son sin sonido." Se aplicó igual por ser instrucción directa y explícita del dueño del proyecto sobre su propio video. **Antes de publicar en IG/TikTok, confirmar con el dueño si de verdad quiere publicarlo sin subtítulos** (pierde alcance en reproducción muda) o si esto era solo para revisar/editar en otra herramienta después.
+- Commit `89306c5` con el mp4 actualizado y el script con el flag.
 
 ### Nota técnica para futuras piezas de video
 Quedó instalado en `E:\python-portable\`: `moviepy`, `imageio-ffmpeg` (trae ffmpeg estático, sin instalación de sistema), `pillow`. Sirve para repetir este tipo de armado (Ken Burns + audio real + subtítulos quemados) sin depender de créditos de Descript ni de ninguna IA generativa.
