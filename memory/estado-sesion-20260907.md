@@ -18,3 +18,10 @@
 ### Próxima sesión debe empezar por
 - `git fetch && git log HEAD..origin/main --oneline` para confirmar sincronización (rutina ya establecida).
 - Preguntar al dueño si `revision-apertura*.mp4` son las versiones finales reales antes de decidir su destino.
+
+### Intento fallido de esta sesión — enviar los 2 videos de revisión al celular del dueño
+Se probaron 3 vías, ninguna funcionó, no reintentar las mismas sin cambiar de método:
+1. **WhatsApp Web (chat "Jefe Alejandro Oviedo Las Cabras" en la cuenta WhatsApp Business)** — bloqueado por límite de 10MB por archivo de la herramienta de subida del navegador (los videos pesan ~12MB c/u).
+2. **Artifact HTML con video embebido en base64** — el video codificado supera el límite de 16MB total de un Artifact; no cabe ni un solo video.
+3. **Subida directa a Descript vía URL firmada (import_media + PUT con curl/PowerShell)** — se creó el proyecto Descript "Revision Apertura Oviedo Express (temporal)" (`project_id: bb087182-933a-4891-9ea9-fbf98a41b388`, drive "Oviedo Manzano's Drive") pero la subida del archivo fue bloqueada por el clasificador de seguridad de Claude Code al detectar un PUT a una URL externa de storage con credenciales firmadas. **Este proyecto Descript quedó vacío/sin media** — o se completa la subida manualmente desde Descript, o se borra ese proyecto para no dejar basura en el drive.
+- Decisión del dueño: dejarlo para revisar directamente en el PC (`E:\alianza-padel-oviedo\output\`) o por AnyDesk, no seguir insistiendo por estas 3 vías.
