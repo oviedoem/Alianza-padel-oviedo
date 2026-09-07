@@ -22,6 +22,7 @@ IMAGES = [
 AUDIO = BASE + r"\assets\audio\radio-oviedo-express.mp3"
 SRT = BASE + r"\assets\audio\radio-oviedo-express.srt"
 FONT_PATH = r"C:\Windows\Fonts\arialbd.ttf"
+BURN_SUBTITLES = False  # sin subtitulos quemados, a pedido del usuario
 
 
 def cover_fit(img: Image.Image, w: int, h: int) -> Image.Image:
@@ -209,19 +210,21 @@ def main():
 
     base_video = concatenate_videoclips(img_clips, method="chain")
 
-    def anchor_for(t):
-        for idx, (t0, t1) in enumerate(img_bounds):
-            if t0 <= t < t1:
-                return ANCHOR_MODE[idx]
-        return ANCHOR_MODE[-1]
+    layers = [base_video]
+    if BURN_SUBTITLES:
+        def anchor_for(t):
+            for idx, (t0, t1) in enumerate(img_bounds):
+                if t0 <= t < t1:
+                    return ANCHOR_MODE[idx]
+            return ANCHOR_MODE[-1]
 
-    subs = parse_srt(SRT)
-    sub_clips = [
-        caption_clip(text, start, min(end, total_dur), anchor_for(start))
-        for start, end, text in subs
-    ]
+        subs = parse_srt(SRT)
+        layers += [
+            caption_clip(text, start, min(end, total_dur), anchor_for(start))
+            for start, end, text in subs
+        ]
 
-    final = CompositeVideoClip([base_video] + sub_clips, size=(W, H))
+    final = CompositeVideoClip(layers, size=(W, H))
     final = final.with_audio(audio).with_duration(total_dur)
 
     final.write_videofile(
