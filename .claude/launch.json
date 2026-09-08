@@ -4,7 +4,7 @@
     {
       "name": "plantillas-static",
       "runtimeExecutable": "E:\\python-portable\\python.exe",
-      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "plantillas"],
+      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "."],
       "port": 8791
     }
   ]

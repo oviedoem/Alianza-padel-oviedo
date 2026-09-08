@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial,Helvetica,sans-serif;}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:#000;}
+  .display{font-family:'Baloo 2',Impact,sans-serif;font-weight:800;text-transform:uppercase;}
+
+  .canvas{position:relative;width:1080px;height:1920px;}
+
+  /* ---------- HERO ---------- */
+  .hero{position:absolute;top:0;left:0;right:0;height:820px;overflow:hidden;}
+  .hero .bg{position:absolute;inset:0;background:url('../assets/fotos-padel-rocks/terraza-lounge-pallets-01.jpg') center 40%/cover no-repeat;}
+  .hero .fade{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.08) 50%, #0c0c0c 100%);}
+
+  .string{position:absolute;top:38px;left:0;right:0;height:2px;background:rgba(255,255,255,0.6);}
+  .bunting{position:absolute;top:30px;left:0;right:0;display:flex;justify-content:space-between;padding:0 18px;}
+  .cl-flag{width:58px;height:39px;border-radius:2px;position:relative;overflow:hidden;box-shadow:0 3px 6px rgba(0,0,0,0.4);border:1px solid rgba(0,0,0,0.15);}
+  .cl-flag:nth-child(odd){transform:rotate(-6deg) translateY(2px);}
+  .cl-flag:nth-child(even){transform:rotate(5deg);}
+  .cl-flag .white{position:absolute;inset:0;background:#fff;}
+  .cl-flag .red{position:absolute;left:0;right:0;bottom:0;height:50%;background:#D52B1E;}
+  .cl-flag .blue{position:absolute;left:0;top:0;width:34%;height:50%;background:#0039A6;display:flex;align-items:center;justify-content:center;}
+  .cl-flag .blue span{color:#fff;font-size:15px;line-height:1;}
+
+  .badge{
+    position:absolute;top:120px;
+    width:172px;height:172px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#fff;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .badge img{width:88%;height:88%;object-fit:contain;display:block;}
+  .badge-oviedo{left:56px;box-shadow:0 0 0 6px #fff, 0 0 0 12px #D52B1E, 0 10px 24px rgba(0,0,0,0.5);}
+  .badge-padel{right:56px;box-shadow:0 0 0 6px #fff, 0 0 0 12px #1E9E5A, 0 10px 24px rgba(0,0,0,0.5);}
+  .hero-headline{
+    position:absolute;top:400px;left:0;right:0;
+    text-align:center;padding:0 50px;
+    font-family:'Baloo 2',Impact,sans-serif;font-weight:800;text-transform:uppercase;
+    color:#fff;font-size:58px;line-height:1.1;letter-spacing:0.5px;
+    text-shadow:0 4px 0 rgba(0,0,0,0.35), 0 8px 20px rgba(0,0,0,0.55);
+    -webkit-text-stroke:2px rgba(0,0,0,0.25);
+  }
+  .hero-headline .accent{color:#FFD200;-webkit-text-stroke:2px rgba(0,0,0,0.35);}
+
+  .sub-ribbon{
+    position:absolute;top:660px;left:0;right:0;
+    background:#D52B1E;color:#fff;
+    font-family:'Baloo 2',Impact,sans-serif;font-weight:800;text-transform:uppercase;
+    font-size:24px;letter-spacing:0.5px;text-align:center;
+    padding:12px 20px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+  }
+  .sub-ribbon .star{color:#FFD200;}
+
+  /* ---------- PREMIO BLOCK ---------- */
+  .premio{position:absolute;top:800px;left:0;right:0;height:600px;overflow:hidden;background:linear-gradient(180deg,#0c0c0c 0%, #D52B1E 20%, #B01010 80%, #0c0c0c 100%);}
+
+  /* diagonal stripe pattern (distinto de los rayos de la Opción A) */
+  .stripes{
+    position:absolute;inset:0;
+    background:repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0 24px, rgba(255,255,255,0) 24px 48px);
+  }
+
+  .burst{
+    position:absolute;left:50px;top:130px;
+    width:230px;height:230px;border-radius:50%;
+    background:#111;border:6px solid #FFD200;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,0.5);
+    transform:rotate(-8deg);
+  }
+  .burst .top{font-family:'Baloo 2',Impact,sans-serif;font-weight:800;font-size:22px;letter-spacing:1px;color:#FFD200;}
+  .burst .big{font-family:'Baloo 2',Impact,sans-serif;font-weight:800;font-size:28px;line-height:1.05;margin:6px 0;}
+  .burst .bottom{font-size:16px;font-weight:700;}
+
+  .floor{position:absolute;bottom:50px;left:0;right:0;height:120px;background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);}
+  .contact-shadow{
+    position:absolute;bottom:66px;left:50%;transform:translateX(-50%);
+    width:460px;height:50px;
+    background:radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.30) 45%, rgba(0,0,0,0) 75%);
+  }
+  .prize-glow{
+    position:absolute;bottom:0px;left:50%;transform:translateX(-50%);
+    width:720px;height:720px;border-radius:50%;
+    background:radial-gradient(circle at 50% 55%, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.90) 38%, rgba(255,220,210,0.45) 60%, rgba(255,220,210,0) 76%);
+  }
+  .prize-photo{
+    position:absolute;bottom:48px;left:50%;transform:translateX(-50%);
+    width:600px;
+    mix-blend-mode:multiply;
+    filter:contrast(1.1) saturate(1.15) brightness(1.03) drop-shadow(0 10px 10px rgba(0,0,0,0.3));
+  }
+
+  /* ---------- CTA BARS (estilo referencia TV) ---------- */
+  .cta-white{position:absolute;top:1400px;left:0;right:0;height:150px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
+  .cta-white .big{font-family:'Baloo 2',Impact,sans-serif;font-weight:800;text-transform:uppercase;font-size:42px;letter-spacing:0.5px;}
+  .cta-white .big .r{color:#D52B1E;}
+  .cta-white .big .n{color:#0039A6;}
+  .cta-white .small{color:#111;font-size:19px;font-weight:800;text-align:center;letter-spacing:0.3px;}
+  .cta-red{position:absolute;top:1550px;left:0;right:0;height:160px;background:#D52B1E;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 40px;}
+  .cta-red .big{font-family:'Baloo 2',Impact,sans-serif;font-weight:800;text-transform:uppercase;color:#fff;font-size:36px;text-align:center;line-height:1.1;}
+  .cta-red .small{color:#fff;font-size:18px;font-weight:800;text-align:center;letter-spacing:0.3px;}
+
+  /* ---------- CONTACT BAR ---------- */
+  .contactbar{
+    position:absolute;bottom:0;left:0;right:0;height:210px;
+    background:#0c0c0c;border-top:4px solid #D52B1E;
+    padding:18px 56px;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .contact-row{color:#fff;font-size:25px;font-weight:700;display:flex;align-items:center;gap:14px;white-space:nowrap;}
+  .contact-row .dot2{color:#D52B1E;font-weight:900;}
+  .icon{width:27px;height:27px;flex-shrink:0;}
+  .handles{color:#f2f2f2;font-size:21px;font-weight:700;margin-top:4px;white-space:nowrap;display:flex;align-items:center;gap:8px;}
+  .handles b{color:#fff;font-weight:900;}
+  .handles .sep{color:#D52B1E;font-weight:900;margin:0 4px;}
+  .ig-icon{width:23px;height:23px;flex-shrink:0;}
+</style>
+</head>
+<body>
+  <div class="canvas">
+
+    <div class="hero">
+      <div class="bg"></div>
+      <div class="fade"></div>
+      <div class="string"></div>
+      <div class="bunting">
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+        <div class="cl-flag"><div class="white"></div><div class="red"></div><div class="blue"><span>★</span></div></div>
+      </div>
+
+      <div class="badge badge-oviedo"><img src="../assets/logos/oviedo-ferreterias-logo-blanco-hd.jpg"></div>
+      <div class="badge badge-padel"><img src="../assets/logos/padel-rocks-rapel-logo.jpg"></div>
+
+      <div class="hero-headline">¡Gana una <span class="accent">parrilla</span> estas Fiestas Patrias!</div>
+      <div class="sub-ribbon"><span class="star">★</span> Tu compra o cotización te puede ganar esta parrilla <span class="star">★</span></div>
+    </div>
+
+    <div class="premio">
+      <div class="stripes"></div>
+      <div class="burst">
+        <div class="top">SORTEO</div>
+        <div class="big">SIN MONTO<br>MÍNIMO</div>
+        <div class="bottom">SEPTIEMBRE 2026</div>
+      </div>
+      <div class="floor"></div>
+      <div class="contact-shadow"></div>
+      <div class="prize-glow"></div>
+      <img class="prize-photo" src="../assets/premios/parrilla-sorteo-01.webp">
+    </div>
+
+    <div class="cta-white">
+      <div class="big">COMPRA <span class="r">·</span> COTIZA <span class="n">·</span> GANA</div>
+      <div class="small">SIN MONTO MÍNIMO · VÁLIDO TODO SEPTIEMBRE 2026</div>
+    </div>
+    <div class="cta-red">
+      <div class="big">¡Gana esta parrilla!</div>
+      <div class="small">SUCURSAL EL MANZANO × PADEL ROCKS RAPEL — DENTRO DEL CLUB</div>
+    </div>
+
+    <div class="contactbar">
+      <div class="contact-row"><span class="dot2">●</span> Cotiza y compra aquí. Despacho en el día o retiro desde las 15:30 hrs.</div>
+      <div class="contact-row">
+        <svg class="icon" viewBox="0 0 24 24"><path fill="#25D366" d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.09-.46-4.35-1.26l-.31-.19-3.02.79.81-2.94-.2-.31A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.36-5.61c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.4-.14-.01-.3-.01-.46-.01s-.42.06-.64.3c-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+        WhatsApp Ferretería +56 9 3862 3488
+      </div>
+      <div class="handles">
+        <svg class="ig-icon" viewBox="0 0 24 24"><defs><linearGradient id="igGradB" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDD55"/><stop offset="50%" stop-color="#E1306C"/><stop offset="100%" stop-color="#5851DB"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGradB)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="16.6" cy="7.4" r="1.1" fill="#fff"/></svg>
+        <b>@oviedo_elmanzano</b><span class="sep">·</span><b>@padel_rocks_rapel</b><span class="sep">·</span>Sector El Estero S/N, Las Cabras
+      </div>
+    </div>
+  </div>
+</body>
+</html>
